@@ -254,10 +254,18 @@ table.simple th{font-family:'Poppins'; font-size:.75rem; letter-spacing:.05em; t
 
   nav.main-nav {
     display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
     width: 100%;
     flex-direction: column;
     gap: 10px;
-    padding-top: 15px;
+    padding: 15px 24px 25px 24px;
+    background: rgba(22, 51, 58, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   }
   nav.main-nav.open {
     display: flex;
@@ -274,5 +282,11 @@ table.simple th{font-family:'Poppins'; font-size:.75rem; letter-spacing:.05em; t
     white-space: normal;
     word-break: break-all;
     font-size: 0.8rem;
+  }
+  .cta-band .email-btn {
+    white-space: nowrap;
+    word-break: normal;
+    font-size: 0.65rem;
+    padding: 12px 10px;
   }
 }
