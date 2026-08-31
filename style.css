@@ -81,6 +81,7 @@ header.site-header.scrolled .nav-inner {
 .brand{
   display:flex; align-items:center; gap:12px;
   font-family:'Baloo Da 2',sans-serif; font-weight:700; font-size:1.05rem; color:#fff;
+  transition: font-size 0.3s ease;
 }
 .brand-logo{
   width:44px; height:44px; border-radius:50%;
@@ -88,6 +89,7 @@ header.site-header.scrolled .nav-inner {
   border:2px solid var(--mustard);
   background:#fff;
   display:block;
+  transition: width 0.3s ease, height 0.3s ease;
 }
 .footer-brand{
   display:flex; align-items:center; gap:12px;
@@ -240,6 +242,16 @@ table.simple th{font-family:'Poppins'; font-size:.75rem; letter-spacing:.05em; t
   /* Responsive menu */
   .nav-inner { flex-wrap: wrap; }
   .mobile-menu-btn { display: block; margin-left: auto; }
+  
+  /* Scroll shrinkage for mobile */
+  header.site-header.scrolled .brand {
+    font-size: 14px;
+  }
+  header.site-header.scrolled .brand-logo {
+    width: 32px;
+    height: 32px;
+  }
+
   nav.main-nav {
     display: none;
     width: 100%;
