@@ -64,6 +64,7 @@ header.site-header{
   color:#fff;
   position:sticky; top:0; z-index:40;
   transition: background 0.3s ease, backdrop-filter 0.3s ease;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 header.site-header.scrolled {
   background: rgba(22, 51, 58, 0.85);
@@ -253,7 +254,11 @@ table.simple th{font-family:'Poppins'; font-size:.75rem; letter-spacing:.05em; t
   }
 
   nav.main-nav {
-    display: none;
+    display: flex;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
     position: absolute;
     top: 100%;
     left: 0;
@@ -268,7 +273,9 @@ table.simple th{font-family:'Poppins'; font-size:.75rem; letter-spacing:.05em; t
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   }
   nav.main-nav.open {
-    display: flex;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
   }
   
   /* Fix long text overflows (e.g. emails) */
